@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "sort.h"
 
 /**
@@ -10,7 +9,7 @@
  *
  * Return: The final index of the pivot element
  */
-int lomuto_partition(int *array, int low, int high, size_t size)
+static int lomuto_partition(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int i = low - 1;
@@ -51,7 +50,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
  * @high: Ending index of the current partition
  * @size: Total size of the array
  */
-void quick_sort_recursive(int *array, int low, int high, size_t size)
+static void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
 	int pivot_index;
 
